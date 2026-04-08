@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Contact Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <main class="page-wrapper">
+    <section class="form-card">
+      <div class="form-header">
+        <h1>Contact Us</h1>
+        <p>Send your message and we'll get back to you within 24 hours.</p>
+      </div>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Alex Morgan" required />
+          <span class="error-message" id="nameError"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="alex@example.com" required />
+          <span class="error-message" id="emailError"></span>
+        </div>
+        <div class="form-row half-row">
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" />
+            <span class="error-message" id="phoneError"></span>
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company name" />
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project inquiry, partnership, support" required />
+          <span class="error-message" id="subjectError"></span>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us more about your request" required></textarea>
+          <span class="error-message" id="messageError"></span>
+        </div>
+        <div class="form-row checkbox-row">
+          <input type="checkbox" id="updates" name="updates" />
+          <label for="updates">Send me updates and useful resources.</label>
+        </div>
+        <button type="submit" class="submit-button">Submit Request</button>
+        <div class="success-message" id="successMessage" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+  <script src="form.js"></script>
+</body>
+</html>
